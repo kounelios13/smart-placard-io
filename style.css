@@ -1,0 +1,261 @@
+/* Smart Placard – shared styles */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #1565C0;
+  --primary-dark: #0D47A1;
+  --accent: #FFB300;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --text: #212121;
+  --text-secondary: #616161;
+  --border: #E0E0E0;
+  --radius: 8px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ── Header ─────────────────────────────── */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 0 1.5rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span.badge {
+  background: var(--accent);
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ── Hero (index only) ───────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+  margin-left: 1rem;
+}
+
+.btn-primary:hover, .btn-outline:hover { opacity: 0.88; }
+
+/* ── Features section ───────────────────── */
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.feature-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ── Legal pages ────────────────────────── */
+.page-hero {
+  background: var(--primary);
+  color: #fff;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.legal-content {
+  max-width: 780px;
+  margin: 3rem auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.legal-content h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 2rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.legal-content p {
+  margin: 0.75rem 0;
+  color: var(--text);
+}
+
+.legal-content ul {
+  margin: 0.5rem 0 0.75rem 1.5rem;
+  color: var(--text);
+}
+
+.legal-content ul li {
+  margin: 0.3rem 0;
+}
+
+.legal-content a {
+  color: var(--primary);
+}
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.contact-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* ── Footer ─────────────────────────────── */
+footer {
+  background: #1A1A2E;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover { color: #fff; }
+
+.footer-links {
+  margin-bottom: 0.75rem;
+}
